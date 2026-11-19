@@ -1,7 +1,7 @@
 def f(N):
-    n = [int(x) for x in str(N)]
-    S = sum([int(x) for x in str(N)])
-    M = max(n) + min(n)
+    n = str(N)
+    S = sum(map(int, str(N)))
+    M = int(max(n)) + int(min(n))
     L = int(n[0])
     R = int(n[-1])
     p1 = S - L
@@ -11,7 +11,8 @@ def f(N):
     else:
         z = str(p1) + str(p2)
     return int(z)
-for N in range(10000,100000):
+for N in range(100000,9999,-1):
     if f(N) == 222:
         print(N)
+        break
 
