@@ -12,7 +12,7 @@ def f(N):
         r = n[len(n) // 2:] + n[:len(n) // 2]
     else:
         r = n + str(N % 5)
-        r = r[len(n) // 2:] + r[:len(n) // 2]
+        r = r[len(r) // 2:] + r[:len(r) // 2]
     return int(r, 5)
 
 for N in range(1,1000):
@@ -20,5 +20,4 @@ for N in range(1,1000):
         print(N)
         break
 
-# с ответом почему-то не сходится,  но код идентичен
 
