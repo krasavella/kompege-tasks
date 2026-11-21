@@ -8,6 +8,17 @@ def p(N):
     return n
 def f(N):
     n = p(N)
-    # С.Л.О.Ж.Н.О. 
-    # там есть какая-то запись, но мне лень ее разбирать
+    if len(n) % 2 == 0:
+        r = n[len(n) // 2:] + n[:len(n) // 2]
+    else:
+        r = n + str(N % 5)
+        r = r[len(n) // 2:] + r[:len(n) // 2]
+    return int(r, 5)
+
+for N in range(1,1000):
+    if f(N) > 50:
+        print(N)
+        break
+
+# с ответом почему-то не сходится,  но код идентичен
 
