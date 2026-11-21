@@ -4,11 +4,11 @@ def p(N):
     n = ''
     while N > 0:
         n = str(N % 5) + n
-        N //= 5
+        N //= 5    # просто сокращенная запись
     return n
 def f(N):
     n = p(N)
-    if int(sum(map(int, str(n)))) % 5 == 0:
+    if int(sum(map(int, str(n)))) % 5 == 0:    # я так записал сумму цифр числа n
         r = n.replace('0', '*').replace('1','0').replace('*', '1') + '14'    # сначала нули заменяем на *, чтобы не запороть все
     else:
         r = n[2:] + '33'
