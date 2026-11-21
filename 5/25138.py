@@ -2,7 +2,7 @@
 
 def f(N):
     n = str(N)
-    S = sum(map(int, str(N)))
+    S = sum(map(int, str(N)))    # я так записал сумму цифр числа N
     M = int(max(n)) + int(min(n))
     L = int(n[0])
     R = int(n[-1])

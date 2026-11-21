@@ -4,7 +4,7 @@ def tr(N):
     n = ''
     while N > 0:
         n = str(N % 4) + n
-        N //= 4
+        N //= 4    # просто сокращенная запись
     return n
         
 def f(N):
