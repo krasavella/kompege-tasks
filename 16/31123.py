@@ -5,7 +5,7 @@ from functools import lru_cache
 def f(n):
     if n == 1:
         return n
-    if n > 1:
+    else n > 1:
         return n * f(n-1)
 
 for n in range(1,3300):
