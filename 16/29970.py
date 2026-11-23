@@ -1,6 +1,6 @@
 # https://kompege.ru/task?id=29970
 
-from functools import *
+from functools import lru_cache
 
 @lru_cache(None)
 def g(n):

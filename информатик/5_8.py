@@ -19,7 +19,8 @@ def f(N):
 a = []
 for N in range(1,10000):
     if f(N) > 1799:
-        a.append(f(N))
+        a.append(f(N)) # тут надежнее через список искать
 print(min(a))
-        
+
+print(min([f(N) for N in range(1,1000) if f(N) > 1799])) # альтернативный вариант записи, всегда работает
 
