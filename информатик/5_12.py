@@ -1,12 +1,12 @@
-def f(a):
-    a1 = str(a)
-    s = int(sum(map(int, a1)))
-    m = int(max(a1))
-    n = int(min(a1))
+def f(N):
+    a = [int(i) for i in str(N)]
+    s = sum(a)
+    m = max(a)
+    n = min(a)
     p = 1
-    for i in a1:
-        if i:
-            p *= int(i)
+    for i in a:
+        if i != 0:
+            p *= i
     b1 = s - m - n
     b2 = p - (2 * s)
     if b1 > b2:
